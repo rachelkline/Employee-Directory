@@ -6,8 +6,8 @@ import DataTable from "./components/DataTable";
 function App() {
   return (
     <>
-    <Nav></Nav>
     <Header></Header>
+    <Nav></Nav>
     <DataTable></DataTable>
     </>
   );
