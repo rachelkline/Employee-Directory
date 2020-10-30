@@ -1,10 +1,14 @@
 import React from "react";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
+import DataTable from "./components/DataTable";
 
 function App() {
   return (
     <>
-    <h1>TEST</h1>
+    <Nav></Nav>
+    <Header></Header>
+    <DataTable></DataTable>
     </>
   );
 }
