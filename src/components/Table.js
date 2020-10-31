@@ -6,11 +6,11 @@ const Table = () => {
   const context = useContext(DataAreaContext);
 
   return (
-
+    <div class="container">
     <div className="datatable mt-5">
       <table
         id="table"
-        className="table table-striped table-hover table-condensed"
+        className="table table-striped table-hover table-bordered"
       >
         <thead>
           <tr>
@@ -35,6 +35,7 @@ const Table = () => {
 
         <UserBody />
       </table>
+    </div>
     </div>
   );
 }
