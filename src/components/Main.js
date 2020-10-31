@@ -1,11 +1,12 @@
 
 import React from "react";
-import DataArea from "./DataArea";
+// import DataInfo from "./DataInfo";
+import UserInfo from "./UserInfo";
 
 function Main () {
     return (
       <>
-        <DataArea />
+        <UserInfo />
       </>
     );
   };
