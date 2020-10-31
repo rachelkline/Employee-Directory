@@ -1,5 +1,6 @@
 import React from "react";
-import SearchName from "./SearchName";
+import Search from "./Search";
+import "../styles/Search.css";
 
 function Nav() {
     return (
@@ -9,8 +10,8 @@ function Nav() {
             type="button">
                 NavBar
             </button>
-            <div className="search-area">
-                <SearchName />
+            <div className="search-area col-12">
+                <Search />
             </div>
         </nav>
     )

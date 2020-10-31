@@ -1,0 +1,12 @@
+.header {
+    padding: 40px 0;
+    color: white;
+    background-color: #09a886;
+    width: 100%;
+    text-align: center;
+    border-bottom: 10px solid #106b64;
+    margin-bottom: 10px;
+}
+.h1 {
+    font-family: 'Staatliches', cursive;   
+}

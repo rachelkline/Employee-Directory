@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import UserBody from "./UserBody";
 import DataAreaContext from "../utils/DataAreaContext";
+import "../styles/Search.css";
 
 const Table = () => {
   const context = useContext(DataAreaContext);
@@ -12,7 +13,7 @@ const Table = () => {
         id="table"
         className="table table-striped table-hover table-bordered"
       >
-        <thead>
+        <thead className="tableHead">
           <tr>
             {context.developerState.headings.map(({ name, width }) => {
               return (
