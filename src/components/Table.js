@@ -14,6 +14,22 @@ const Table = () => {
       >
         <thead>
           <tr>
+            {context.developerState.headings.map(({ name, width }) => {
+              return (
+                <th
+                  className="col"
+                  key={name}
+                  style={{ width }}
+                  onClick={() => {
+                    context.handleSort(name.toLowerCase());
+                    context.handleSort(name);
+                  }}
+                >
+                  {name}
+                  <span className="pointer"></span>
+                </th>
+              );
+            })}
           </tr>
         </thead>
 
