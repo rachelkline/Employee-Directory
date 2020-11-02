@@ -6,7 +6,7 @@
 https://rk-employee-directory.herokuapp.com/
 
 
-![IMAGE](rmImgs/Directory.png)
+![IMAGE](rmImgs/EmpDirectory.png)
 
 
 ---
