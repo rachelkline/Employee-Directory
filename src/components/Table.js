@@ -7,7 +7,7 @@ const Table = () => {
   const context = useContext(DataAreaContext);
 
   return (
-    <div class="container">
+   
     <div className="datatable mt-5">
       <table
         id="table"
@@ -22,12 +22,12 @@ const Table = () => {
                   key={name}
                   style={{ width }}
                   onClick={() => {
-                    context.handleSort(name.toLowerCase());
+                    // context.handleSort(name.toLowerCase());
                     context.handleSort(name);
                   }}
                 >
                   {name}
-                  <span className="pointer"></span>
+                  <span className="cursor"></span>
                 </th>
               );
             })}
@@ -37,7 +37,7 @@ const Table = () => {
         <UserBody />
       </table>
     </div>
-    </div>
+    
   );
 }
 

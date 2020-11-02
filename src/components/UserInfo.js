@@ -5,43 +5,48 @@ import API from "../utils/API";
 import DataAreaContext from "../utils/DataAreaContext";
 
 const UserInfo = () => {
+  //create the headings & set State
   const [developerState, setDeveloperState] = useState({
+    //empty arrays for users
     users: [],
     order: "descend",
     filteredUsers: [],
     headings: [
       { name: "Icon Image", width: "10%", order: "descend" },
-      { name: "Employee", width: "10%", order: "descend" },
+      { name: "name", width: "10%", order: "descend" },
       { name: "Phone Number", width: "20%", order: "descend" },
       { name: "Email Address", width: "20%", order: "descend" },
-      { name: "Date of Birth", width: "10%", order: "descend" }
+      { name: "dob", width: "10%", order: "descend" }
     ]
   });
 
   const handleSort = heading => {
+    //filter headings
     let currentOrder = developerState.headings
       .filter(elem => elem.name === heading)
       .map(elem => elem.order)
       .toString();
 
+    //switch order from ascend to descend and vice versa
     if (currentOrder === "descend") {
       currentOrder = "ascend";
     } else {
       currentOrder = "descend";
     }
 
-    const compareFnc = (x, y) => {
+    //write a function that will compare the users by heading info
+    const compareUsers = (x, y) => {
       if (currentOrder === "ascend") {
-        // eliminate users with missing info
+        // users with missing info
         if (x[heading] === undefined) {
           return 1;
         } else if (y[heading] === undefined) {
           return -1;
         }
-        // sort by number
-        else if (heading === "Name") {
+        // sort by name(letters) and DOB(year)
+        else if (heading === "name") {
           return x[heading].first.localeCompare(y[heading].first);
-        } else if (heading === "Date of Birth") {
+        } else if (heading === "dob") {
           return x[heading].age - y[heading].age;
         } else {
           return x[heading].localeCompare(y[heading]);
@@ -53,8 +58,8 @@ const UserInfo = () => {
         } else if (y[heading] === undefined) {
           return -1;
         }
-        // repeat above for reverse vars
-        else if (heading === "Name") {
+        
+        else if (heading === "name") {
           return y[heading].first.localeCompare(x[heading].first);
         }else if (heading === "dob") {
           return y[heading].age - x[heading].age;
@@ -64,8 +69,8 @@ const UserInfo = () => {
       }
     };
 
-    //sort | compare using map
-    const sortedUsers = developerState.filteredUsers.sort(compareFnc);
+    //sort and compare using map functionality
+    const sortedUsers = developerState.filteredUsers.sort(compareUsers);
     const updatedHeadings = developerState.headings.map(elem => {
       elem.order = elem.name === heading ? currentOrder : elem.order;
       return elem;
@@ -82,6 +87,7 @@ const UserInfo = () => {
   const handleSearchChange = event => {
     const filter = event.target.value;
     const filteredList = developerState.users.filter(item => {
+      //create value variable and make lower case
       let values = item.name.first.toLowerCase() + " " + item.name.last.toLowerCase();
       console.log(filter, values)
     if(values.indexOf(filter.toLowerCase()) !== -1){
@@ -92,6 +98,8 @@ const UserInfo = () => {
     setDeveloperState({ ...developerState, filteredUsers: filteredList });
   };
 
+
+  //Call API to grab users
   useEffect(() => {
     API.getUsers().then(results => {
       console.log(results.data.results);

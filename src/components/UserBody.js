@@ -17,7 +17,10 @@ const UserBody = () => {
 
   return (
     <tbody>
-      {context.developerState.filteredUsers.map(({ id, name, picture, phone, email, dob, }) => {
+      {/* add sort functionality */}
+      {context.developerState.filteredUsers[0] !== undefined && context.developerState.filteredUsers[0].name !== undefined ? (
+        // insert user info (id, name, pic, phone number, email, birthday)
+        context.developerState.filteredUsers.map(({  id, name, picture, phone, email, dob }) => {
           return (
             <tr key={id.value}>
               <td data-th="Image" className="align-middle">
@@ -43,12 +46,12 @@ const UserBody = () => {
                 <p>Age: {dob.age}</p>
 
               </td>
-            </tr>
+              </tr>
           );
         })
-        
-        
-      }
+      ) : (
+        <></>
+      )}
     </tbody>
   );
 }
