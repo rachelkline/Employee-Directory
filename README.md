@@ -15,9 +15,9 @@ https://rk-employee-directory.herokuapp.com/
 
   *The what, why, and how:*
 
-`PROJECT DESCRIPTION:` For this assignment, we had to create an employee directory with React. In order to do this, we had to break up our user interface into components and manage the state of the components based on the user interaction.
+`PROJECT DESCRIPTION:` For this assignment, we had to create an employee directory with React. In order to do this, we had to break up our user interface into components and manage the state of the components based on the user interaction. We were required to be able to search by at least one category and sort by one category.
 
-`WHAT IS IT FOR?:` Both employees and managers would benefit from an application like this where they can view information aobut other employees like their email and birthday. The search functionality is especially useful if an employee or manager wants to search for a specific employee.
+`WHAT IS IT FOR?:` Both employees and managers would benefit from an application like this where they can view information aobut other employees like their email and birthday. The search functionality is especially useful if an employee or manager wants to search for a specific employee. When you click 'name', the employees will be sorted by the first letter of their first name. When you click 'dob', the employees will be sorted by their age/date of birth.
 
 
   ---
