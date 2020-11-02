@@ -11,3 +11,12 @@
     background-color: #09a886;
     color: white;
 }
+
+.datatable .col {
+    cursor: pointer;
+  }
+
+.datatable .col .cursor:after {
+    content: "";
+    margin-right: 18px;
+}
