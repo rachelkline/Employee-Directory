@@ -86,9 +86,7 @@ To run this application:
 │       └── UserBody.js 
 │       └── UserInfo
 │       └── Wrapper.js 
-│   >styles
-│       └── Header.css
-│       └── Search.css  
+│   >styles 
 │   >utils
 │       └── API.js
 │       └── DataAreaContext.js
