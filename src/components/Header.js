@@ -5,7 +5,7 @@ function Header () {
     return (
       <div className="header text-center">
         <h1 className="h1">Employee Directory</h1>
-        <p>Type in an employee name to filter search results</p>
+        <p>Type in an employee name to filter search results or click name/dob to sort employees</p>
       </div>
     )
   }

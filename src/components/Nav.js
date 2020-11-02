@@ -5,12 +5,8 @@ import "../styles/Search.css";
 function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <button
-            className="navbar-toggler"
-            type="button">
-                NavBar
-            </button>
-            <div className="search-area col-12">
+            
+            <div className="search-area col-6">
                 <Search />
             </div>
         </nav>
