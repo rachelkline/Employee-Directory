@@ -47,6 +47,10 @@ To run this application:
 
 3. See the results filter to whatever you are typing in the search bar!
 
+4. Click on either the 'name' tab or the 'dob' tab
+
+5. See your results sorted!
+
 ---
 
 <img src = "rmImgs/laptop-code-solid.svg" width="40">
